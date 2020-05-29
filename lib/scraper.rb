@@ -17,7 +17,7 @@ class Scraper
         profile_url = student_info.css("a").attr("href").text
         hash = {:name => name, :location => location, :profile_url => profile_url}
       end
-    end
+    
   all
 end
 
