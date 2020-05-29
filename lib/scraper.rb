@@ -38,6 +38,7 @@ class Scraper
         student_profiles[:github] = elem.attr("href")
       elsif elem.attr("href").include?("com/")
         student_profiles[:blog] = elem.attr("href")
+        binding.pry
       end
     end
 
