@@ -19,8 +19,8 @@ class Scraper
         hash = {:name => name, :location => location, :profile_url => profile_url}
         all << hash
       end
-  all
-end
+    all
+  end
 
   def self.scrape_profile_page(profile_url)
     site = Nokogiri::HTML(open(profile_url))
