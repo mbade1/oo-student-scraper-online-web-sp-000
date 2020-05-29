@@ -19,7 +19,6 @@ class Scraper
         hash = {:name => name, :location => location, :profile_url => profile_url}
       end
     end
-    all << hash
   all
 end
 
