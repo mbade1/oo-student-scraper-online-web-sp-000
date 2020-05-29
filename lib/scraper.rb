@@ -46,8 +46,4 @@ end
 
     student_profiles
   end
-
-
-
-  end
 end
