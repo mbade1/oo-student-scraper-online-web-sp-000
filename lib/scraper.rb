@@ -42,7 +42,7 @@ class Scraper
     end
 
     student_profiles[:profile_quote] = site.css(".vitals-container .vitals-text-container .profile_quote").text
-    student_profiles[:bio] = site.css(".bio-block.details-block .bio-content.content-holder .title-holder .description-holder p").text
+    student_profiles[:bio] = site.css(".details-container .bio-block.details-block .bio-content.content-holder .title-holder .description-holder p").text
 
     student_profiles
   end
