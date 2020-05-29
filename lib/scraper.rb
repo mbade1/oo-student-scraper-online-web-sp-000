@@ -15,7 +15,6 @@ class Scraper
       name = info.css("h4.student-name").text
       location = info.css("p.student-location").text
       profile_url = info.css("a").attr("href").text
-      binding.pry
       hash = {:name => name,
       :location => location,
       :profile_url => profile_url
@@ -23,6 +22,7 @@ class Scraper
     all << hash
   end
   all
+  binding.pry
 end
 
   def self.scrape_profile_page(profile_url)
