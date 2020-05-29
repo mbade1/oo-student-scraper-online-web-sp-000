@@ -12,6 +12,7 @@ class Scraper
     students = site.css("div.roster-cards-container")
     students.each do |info|
       name = info.css("h4.student-name").text
+      binding.pry
       location = info.css("p.student-location").text
       profile_url = info.css("a").attr("href").text
       hash = {:name => name,
