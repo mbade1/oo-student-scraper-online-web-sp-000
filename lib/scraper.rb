@@ -11,7 +11,7 @@ class Scraper
     all = []
 
     students = site.css("div.roster-cards-container")
-    binding.pry
+    #binding.pry
     students.each do |info|
       info.each do |student_info|
         name = student_info.css("h4.student-name").text
