@@ -46,3 +46,4 @@ class Scraper
 
     student_profiles
   end
+end
