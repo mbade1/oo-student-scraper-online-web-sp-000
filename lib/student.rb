@@ -18,8 +18,13 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    new_hash = attributes_hash.each {|key, value| self.send(("#{key}="), value)}
-    Scraper.scrape_profile_page(new_hash)
+    self.send("twitter=", attributes_hash[:twitter])
+    self.send("linkedin=", attributes_hash[:linkedin])
+    self.send("github=", attributes_hash[:github])
+    self.send("blog=", attributes_hash[:blog])
+    self.send("profile_quote=", attributes_hash[:profile_quote])
+    self.send("bio=", attributes_hash[:bio])
+    self.send("profile_url=", attributes_hash[:profile_url])
   end
 
   def self.all
