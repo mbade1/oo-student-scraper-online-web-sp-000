@@ -18,8 +18,8 @@ class Student
   end
 
   def add_student_attributes(attributes_hash)
-    
-
+    new_hash = attributes_hash.each {|key, value| self.send(("#{key}="), value)}
+    Scraper.scrape_profile_page << new_hash
   end
 
   def self.all
