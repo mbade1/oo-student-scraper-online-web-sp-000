@@ -32,11 +32,11 @@ class Scraper
     social_media_link.each do |elem|
       if elem.attr("href").include?("twitter")
         student_profiles[:twitter] = elem.attr("href")
-      if elem.attr("href").include?("linkedin")
+      elsif elem.attr("href").include?("linkedin")
         student_profiles[:linkedin] = elem.attr("href")
-      if elem.attr("href").include?("github")
+      elsif elem.attr("href").include?("github")
         student_profiles[:github] = elem.attr("href")
-      if elem.attr("href").include?("youtube")
+      elsif elem.attr("href").include?("youtube")
         student_profiles[:youtube] = elem.attr("href")
       end
     end
