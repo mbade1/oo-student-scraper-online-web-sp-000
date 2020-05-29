@@ -29,7 +29,7 @@ end
 
     social_media_link = doc.css(".vitals-container .social-icon-container a")
 
-    
+
 
   end
 end
