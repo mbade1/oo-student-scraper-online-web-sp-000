@@ -36,8 +36,8 @@ class Scraper
         student_profiles[:linkedin] = elem.attr("href")
       elsif elem.attr("href").include?("github")
         student_profiles[:github] = elem.attr("href")
-      elsif elem.attr("href").include?("youtube")
-        student_profiles[:youtube] = elem.attr("href")
+      elsif elem.attr("href").include?("com/")
+        student_profiles[:blog] = elem.attr("href")
       end
     end
 
