@@ -6,8 +6,7 @@ class Scraper
 
   def self.scrape_index_page(index_url)
     binding.pry
-    html = open(index_url)
-    site = Nokogiri::HTML(html)
+    site = Nokogiri::HTML(open(index_url))
 
     all = []
 
