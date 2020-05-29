@@ -27,7 +27,25 @@ end
 
     student_profiles = {}
 
-    social_media_link = doc.css(".vitals-container .social-icon-container a")
+    social_media_link = site.css(".vitals-container .social-icon-container a")
+
+    social_media_link.each do |elem|
+      if elem.attr("href").include?("twitter")
+        student_profiles[:twitter] = elem.attr("href")
+      if elem.attr("href").include?("linkedin")
+        student_profiles[:linkedin] = elem.attr("href")
+      if elem.attr("href").include?("github")
+        student_profiles[:github] = elem.attr("href")
+      if elem.attr("href").include?("youtube")
+        student_profiles[:youtube] = elem.attr("href")
+      end
+    end
+
+    student_profiles[:profile_quote] = site.css(".vitals-container .vitals-text-container .profile_quote").text
+    student_profiles[:bio] = site.css(".bio-block.details-block .bio-content.content-holder .title-holder .description-holder p").text
+
+    student_profiles
+  end
 
 
 
